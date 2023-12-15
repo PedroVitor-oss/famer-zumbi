@@ -16,8 +16,8 @@ public class Player : MonoBehaviour
     private Animator ani;
     private SpriteRenderer sprite;
     public MoveControler moveCtr;//pede para defini na unity 
-    private bool cuzin = true;
-
+    public bool cuzin = true; //projeto atulizado
+    public bool pinto = true;//nova linha adicionada
     void Start()
     {
         ani = GetComponent<Animator>();//parametros do animator "vivo"(bool) e "run"(bool)
@@ -36,6 +36,9 @@ public class Player : MonoBehaviour
        }
         if (cuzin){
             Debug.Log ("meu pau"); 
+        }
+        if (pinto){
+            Debug.Log ("meu cuzinho"); 
         }
         
     }
