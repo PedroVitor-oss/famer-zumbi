@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     private Animator ani;
     private SpriteRenderer sprite;
     public MoveControler moveCtr;//pede para defini na unity 
+    private bool cuzin = true;
 
     void Start()
     {
@@ -26,7 +27,16 @@ public class Player : MonoBehaviour
     void Update()
     {
         // Lógica de movimento aqui usando moveCtr
-        if(Input.GetKey(moveCtr.Rigth)||Input.GetKey(moveCtr.Left)) ani.SetBool("run",true); else ani.SetBool("run",false);
+        if(Input.GetKey(moveCtr.Rigth)||Input.GetKey(moveCtr.Left)) {
+        ani.SetBool("run",true);
+        }
+       else {
+        ani.SetBool("run",false);
         sprite.flipX = Input.GetKey(moveCtr.Left); //faz olhar para tras quando ele estiver se movendo para traz
+       }
+        if (cuzin){
+            Debug.Log ("meu pau"); 
+        }
+        
     }
 }
